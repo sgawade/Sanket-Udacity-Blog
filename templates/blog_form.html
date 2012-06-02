@@ -1,0 +1,19 @@
+{% extends "templates/base.html" %}
+{% block content %}    
+    <h3>Add New Post</h3>
+    <form method="POST">
+      <label>
+        <div>Subject</div>
+        <input type="text" name="subject" value="{{subject}}">
+      </label>
+      
+      <label>
+        <div>Body</div>
+        <textarea rows="5" cols="100" name="content">{{content}}</textarea>
+      </label>
+      <div class="error">{{error}}</div>
+      <br>
+      <input type="submit" title="Sumit Art">
+    </form>
+    <hr>
+{% endblock %}

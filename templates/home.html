@@ -1,0 +1,12 @@
+{% extends "templates/base.html" %}
+{% block content %}    
+    {% for b in blogs %}
+      <div>
+        <div> <h3>{{b.subject}}</h3></div>
+        <br>
+        <pre>{{b.content}}</pre>
+      </div>
+      <hr>
+    {% endfor %}
+      <p> Queried {{u_time}} seconds ago</p>
+{% endblock %}

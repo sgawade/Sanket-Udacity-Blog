@@ -1,0 +1,34 @@
+application: sanket-udacity-blog
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /blog
+  script: blog.app
+
+- url: /blog/flush
+  script: blog.app
+
+- url: /blog/newpost
+  script: blog.app
+
+- url: /blog/signup
+  script: blog.app
+
+- url: /blog/login
+  script: blog.app
+
+- url: /blog/logout
+  script: blog.app
+
+- url: /blog/.json
+  script: blog.app
+
+- url: /blog/.*
+  script: blog.app
+
+libraries:
+- name: jinja2
+  version: latest
